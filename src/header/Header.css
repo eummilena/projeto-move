@@ -1,15 +1,16 @@
 .header-bg {
     padding: 3rem;
-    overflow: hidden;
 }
+
+
 
 .header-bg::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.708) 100%, rgba(1, 1, 3, 0.6138830532212884) 100%, rgba(0, 212, 255, 1) 100%),
         url(../assets/images/wallpaper-house.png);
     background-repeat: no-repeat;
@@ -20,25 +21,32 @@
     /* Inclina a imagem */
     transform-origin: bottom left;
     /* Define o ponto de inclinação */
-    z-index: -1;
+    z-index: 0;
     /* Mantém a imagem no fundo */
+}
+
+img {
+    position: absolute;
 }
 
 h1 {
     color: #fff;
     font-size: 48px;
-    transform: skew(0);
+    z-index: 1;
+
 }
 
 h4 {
     color: #fff;
     font-weight: 300;
     font-size: 28px;
+    z-index: 2;
 }
 
 .buttonHeader {
     background: #ff3800;
     color: #fff;
+    z-index: 2;
 }
 
 .buttonHeader:hover {

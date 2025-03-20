@@ -1,0 +1,15 @@
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0 2rem;
+    gap: 20px;
+    padding-top: 80vh;
+}
+
+.textPrincipal {
+    color: #ff3800;
+}

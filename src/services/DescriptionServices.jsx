@@ -2,9 +2,9 @@ import React from 'react'
 import phone from '../assets/images/phone-call.svg'
 import dollar from '../assets/images/dollar.svg'
 import shield from '../assets/images/shield.svg'
-import Subtitle from '../components/Subtitle'
+import Subtitle4 from '../components/Subtitle4'
 import Text from '../components/Text'
-import './DescriptionServices.css'
+import styles from './DescriptionServices.module.css'
 
 const services = [
     {
@@ -28,12 +28,12 @@ console.log(services);
 
 const DescriptionServices = () => {
     return (
-    <div className="descriptionServices">
+        <div className={styles.descriptionServices}>
             {services.map((service, index) => (
-                <article className='card' key={index}>
+                <article className={styles.card} key={index}>
                     <img src={service.icon} />
-                    <Subtitle className="subtitle" subtitle={service.title} />
-                    <Text className="text" text={service.description} />
+                    <Subtitle4 className={styles.subtitle} subtitle4={service.title} />
+                    <Text className={styles.text} text={service.description} />
                 </article>
             ))}
 </div>

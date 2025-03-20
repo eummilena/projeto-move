@@ -4,8 +4,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f8faff;
-    margin: 15rem 0;
+    align-content: center;
+    background-color: antiquewhite;
 }
 
 .textPrincipal {

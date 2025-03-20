@@ -22,6 +22,7 @@
     z-index: 0;
     /* Mantém a imagem no fundo */
 
+
 }
 
 img {
@@ -31,6 +32,7 @@ img {
 .title {
     color: #fff;
     z-index: 1;
+
 }
 
 .subtitle {
@@ -43,6 +45,7 @@ img {
     background: #ff3800;
     color: #fff;
     z-index: 2;
+    margin-left: 3em;
 }
 
 .buttonHeader:hover {
@@ -50,11 +53,14 @@ img {
     color: #ff3800;
 }
 
+
+
 .align {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     flex-wrap: wrap;
     align-items: first baseline;
+    gap: 50px;
 
 }

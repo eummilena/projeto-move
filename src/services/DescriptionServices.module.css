@@ -1,27 +1,25 @@
 .descriptionServices {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-    width: 50vw;
-    margin-top: 5rem;
-
+    gap: 50px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    background-color: #fff;
+    min-width: 100px;
     width: 300px;
     height: 400px;
-    background-color: #fff;
-    gap: 50px;
     padding: 5px;
+    margin: 10px 0;
     -webkit-box-shadow: 10px 10px 64px -44px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 64px -44px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 64px -44px rgba(0, 0, 0, 0.75);
+    gap: 50px;
 
 }
 
@@ -30,11 +28,7 @@
     height: 30px;
 }
 
-.subtitle {
-    text-align: center;
-}
-
+.subtitle,
 .text {
-    font-size: 16px;
     text-align: center;
 }

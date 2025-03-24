@@ -1,0 +1,89 @@
+.work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #fff;
+    height: 100%;
+    padding: 2rem;
+
+
+
+
+}
+
+.subtitle {
+    text-decoration: underline;
+}
+
+.textBold {
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr;
+
+    grid-template-areas:
+        "box1 img box2"
+        "box3 img box4";
+    justify-content: center;
+}
+
+.steps {
+    width: 80px;
+    height: 80px;
+}
+
+.box1 {
+    grid-area: box1;
+    width: 30vw;
+    padding: 2rem;
+    margin-left: 100px;
+
+}
+
+.box2 {
+    grid-area: box2;
+    width: 30vw;
+    padding: 1rem;
+    margin-top: 100px;
+}
+
+.pontilhados {
+    grid-area: img;
+    align-self: center
+}
+
+.pontilhados img {
+    margin-top: 60px;
+    height: 500px;
+
+}
+
+.box3 {
+    grid-area: box3;
+    width: 30vw;
+    padding: 1rem;
+    margin-right: 50px;
+}
+
+.box4 {
+    grid-area: box4;
+    width: 30vw;
+    padding: 1rem;
+    margin-top: 100px;
+}
+
+.button {
+    color: #ff3800;
+    border: #ff3800 1px solid;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #ff3800;
+}

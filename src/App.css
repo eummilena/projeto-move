@@ -11,9 +11,16 @@ html {
 
 }
 
+body {
+    min-height: 100vh;
+}
+
 .container {
     display: flex;
     flex-direction: column;
+
+    width: 100%;
+    /* Garante que os elementos ocupem toda a largura */
 }
 
 button {
@@ -29,7 +36,7 @@ button {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
 h2 {
@@ -38,9 +45,17 @@ h2 {
 }
 
 h4 {
-    font-size: 1.75rem;
+    font-size: clamp(0.2rem, 2vw, 1.75rem);
 }
 
 p {
-    font-size: 1rem;
+    font-size: clamp(14px, 15px, 1rem);
+}
+
+@media (max-width: 600px) {
+    button {
+        font-size: 1rem;
+        padding: 1rem;
+        max-width: 300px;
+    }
 }

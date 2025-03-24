@@ -4,10 +4,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    padding: 0 2rem;
     gap: 20px;
-    padding-top: 400px;
+    margin-top: 10vh;
+    /* Empurra a seção para evitar sobreposição */
+    min-height: calc(100vh - 10vh);
+    position: relative;
 }
 
 .textPrincipal {

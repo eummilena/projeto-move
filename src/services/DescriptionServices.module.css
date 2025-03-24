@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     gap: 50px;
 }
 
@@ -11,9 +12,8 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    min-width: 100px;
-    width: 300px;
-    height: 400px;
+    width: clamp(250px, 30vw, 300px);
+    height: clamp(350px, 40vh, 400px);
     padding: 5px;
     margin: 10px 0;
     -webkit-box-shadow: 10px 10px 64px -44px rgba(0, 0, 0, 0.75);
@@ -24,8 +24,9 @@
 }
 
 .card img {
-    width: 30px;
-    height: 30px;
+
+    width: clamp(30px, 5vw, 50px);
+    height: auto;
 }
 
 .subtitle,

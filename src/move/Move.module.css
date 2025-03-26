@@ -3,9 +3,11 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 2rem;
     height: 100%;
+
 }
 
 .description {
@@ -23,9 +25,9 @@
 }
 
 .notebook {
-    width: 50%;
+    width: 40%;
     background-image: url(../assets/images/notebook.png);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;

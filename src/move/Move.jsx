@@ -8,8 +8,6 @@ import play from '../assets/images/play-button.svg'
 
 const Move = () => {
     const [showVideo, setShowVideo] = React.useState(false);
-
-    
     
 
   return (

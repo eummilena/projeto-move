@@ -3,6 +3,7 @@ import Header from './header/Header'
 import Services from './services/Services'
 import Works from './works/Works'
 import './App.css'
+import Move from './move/Move'
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className='container'>
       <Header />
       <Services /> 
-      <Works/>
+      <Works />
+      <Move/>
     </div>
   )
 }

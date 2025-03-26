@@ -4,6 +4,7 @@ import Services from './services/Services'
 import Works from './works/Works'
 import './App.css'
 import Move from './move/Move'
+import Location from './location/Location'
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <Header />
       <Services /> 
       <Works />
-      <Move/>
+      <Move />
+      <Location/>
     </div>
   )
 }

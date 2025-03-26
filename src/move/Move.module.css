@@ -27,7 +27,7 @@
 .notebook {
     width: 40%;
     background-image: url(../assets/images/notebook.png);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;

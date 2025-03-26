@@ -1,0 +1,47 @@
+.location {
+    background-image: url(../assets/images/map.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon {
+    height: 100px;
+    color: #ff3800;
+}
+
+.map {
+    margin-right: 200px;
+}
+
+.info {
+    position: relative;
+    background: #fff;
+    padding: 1rem;
+    line-height: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.139);
+    font-weight: 500;
+    width: 300px;
+
+
+}
+
+.info span {
+    margin: 0 3px;
+}
+
+.info::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 10%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}

@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .card {
@@ -19,7 +19,8 @@
     -webkit-box-shadow: 10px 10px 64px -44px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 64px -44px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 64px -44px rgba(0, 0, 0, 0.75);
-    gap: 50px;
+    gap: 20px;
+    padding: 2rem;
 
 }
 

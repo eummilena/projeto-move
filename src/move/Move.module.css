@@ -1,0 +1,54 @@
+.move {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem;
+    height: 100%;
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 50%;
+}
+
+.textOrange {
+    color: #ff3800;
+
+}
+
+.notebook {
+    width: 40%;
+    background-image: url(../assets/images/notebook.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+img {
+    display: block;
+    margin: auto;
+
+}
+
+
+
+.textOrange::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 3px solid #ff3800;
+    border-bottom: 3px solid #ff3800;
+    transform: rotate(-45deg);
+    margin-left: 10px;
+
+}

@@ -1,0 +1,95 @@
+/* ------------------ FORMS -------------------------*/
+
+.form {
+    display: flex;
+    background: #fff;
+
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 60%;
+}
+
+.buttonContent {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+    justify-content: flex-end;
+
+}
+
+.buttonNext {
+    background-color: #BEFF9F;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.buttonBack {
+    background: none;
+    color: #ff3800;
+    cursor: pointer;
+}
+
+.buttonEnd {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+/* ----------------- STEPS -------------------------- */
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+}
+
+.stepOn {
+    background: #000;
+    color: #fff;
+
+}
+
+.stepOff {
+    background: #f8faff;
+    color: #fff;
+
+}
+
+.active {
+    color: #000
+}
+
+.inative {
+    color: #fff;
+}
+
+/* --------------------- Step 1 ---------------------*/
+
+.step1 {
+    display: block;
+
+}

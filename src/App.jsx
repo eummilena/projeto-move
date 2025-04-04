@@ -5,6 +5,7 @@ import Works from './works/Works'
 import './App.css'
 import Move from './move/Move'
 import Location from './location/Location'
+import Form from './form/Form'
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Services /> 
       <Works />
       <Move />
-      <Location/>
+      <Location />
+      <Form />
     </div>
   )
 }

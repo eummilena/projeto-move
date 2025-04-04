@@ -52,6 +52,22 @@ p {
     font-size: clamp(14px, 15px, 1rem);
 }
 
+label {
+    font-size: 1.18rem;
+    font-weight: bold;
+    line-height: 2;
+}
+
+input {
+    background: #f8faff;
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+
+}
+
 @media (max-width: 600px) {
     button {
         font-size: 1rem;

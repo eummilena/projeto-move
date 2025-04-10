@@ -21,27 +21,28 @@ const steps = [
         step: 4,
         title: 'Localização Entrega',
         line: false
-        
+
     },
 
 ]
-    
 
 
-const Steps = ({stepActual}) => {
- 
+
+const Steps = ({ stepActual }) => {
+
     return (
-      <>
-         <div className={styles.steps}>
-          {steps.map((step) => (
-             <div className={`${styles.steps}  `} key={step.step} >
-                  <span className={`${styles.step} ${step.step <= stepActual ? styles.stepOn : styles.stepOff}`}>{step.step}</span>
-                  <p className={`${step.step <= stepActual ? styles.active : styles.inative}`}>{step.title}</p>
-                  {step.line &&  <span className={`${step.step <= stepActual ? styles.active : styles.inative}`}>{step.line}</span>} 
-        </div> ))}
-         </div>
+        <>
+            <div className={styles.steps}>
+                {steps.map((step) => (
+                    <div className={`${styles.steps}  `} key={step.step} >
+                        <span className={`${styles.step} ${step.step <= stepActual ? styles.stepOn : styles.stepOff}`}>{step.step}</span>
+                        <p className={`${step.step <= stepActual ? styles.active : styles.inative}`}>{step.title}</p>
+                        {step.line && <span className={`${step.step <= stepActual ? styles.active : styles.inative}`}>{step.line}</span>}
+                    </div>
+                ))}
+            </div>
         </>
-  )
+    )
 }
 
 

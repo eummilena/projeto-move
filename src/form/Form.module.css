@@ -87,9 +87,100 @@
     color: #fff;
 }
 
-/* --------------------- Step 1 ---------------------*/
 
-.step1 {
+.step1,
+.step2 {
+    display: grid;
+    grid-template-areas:
+        "form1 form2"
+        "form3 form4";
+    gap: 20px;
+}
+
+.form1 {
+    grid-area: form1;
+}
+
+.form2 {
+    grid-area: form2;
+}
+
+.form3 {
+    grid-area: form3;
+}
+
+.form4 {
+    grid-area: form4;
+}
+
+/* --------------------- Step 2 ---------------------*/
+.radio {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.select {
+    background: #f8faff;
+    padding: .5rem .75rem;
+    border: none;
+    border-radius: 5px;
     display: block;
+    width: 100%;
+}
 
+
+
+.select option {
+    background: #f8faff;
+    padding: .5rem .75rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* ------------------------------ Step 3 -----------------------------------*/
+
+.step3 {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas:
+        "input1 input1"
+        "input2 input3"
+        "input4 ."
+    ;
+    gap: 20px;
+}
+
+.input1 {
+    grid-area: input1;
+    width: 100%;
+
+}
+
+.input2 {
+    grid-area: input2;
+}
+
+.input3 {
+    grid-area: input3;
+}
+
+.input4 {
+    grid-area: input4;
+}
+
+/* ------------------------------ Step 4 --------------------------------*/
+.step4 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.check {
+    width: 20%;
 }

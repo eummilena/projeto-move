@@ -29,7 +29,7 @@ const Step3 = () => {
   return (
     <div className={styles.step3}>
       {formStep3.map(({ label, type, id }) => (
-        <div className={` ${id === 'address' && styles.input1} ${id === 'cidade' && styles.input2} ${id === 'estado' && styles.input3} ${id === 'cep' && styles.input4} `}>
+        <div key={id} className={` ${id === 'address' && styles.input1} ${id === 'cidade' && styles.input2} ${id === 'estado' && styles.input3} ${id === 'cep' && styles.input4} `}>
           <label htmlFor={id}>{label}</label>
           <input type={type} id={id} />
         </div>

@@ -25,13 +25,14 @@ body {
 
 button {
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: clamp(0.2rem, 1.2rem, 1.4rem);
     padding: 1.5rem;
     border-radius: 50px;
     font-weight: 700;
     border: none;
     width: auto;
     cursor: pointer;
+    text-align: center;
     max-width: 400px;
 }
 
@@ -40,17 +41,54 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1rem, 1.5rem, 2.5rem);
     font-weight: 600;
 }
 
 h4 {
-    font-size: clamp(0.2rem, 2vw, 1.75rem);
+    font-size: clamp(0.2rem, 1.8vw, 1.75rem);
 }
 
 p {
     font-size: clamp(14px, 15px, 1rem);
 }
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2;
+}
+
+input {
+    background: #f8faff;
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+
+}
+
+
+input[type='radio'] {
+    width: 5%;
+    accent-color: black;
+    background: #f8faff;
+
+}
+
+textarea {
+    background: #f8faff;
+    border: none;
+    padding: .5rem;
+    width: 100%;
+    display: block;
+    height: 100px;
+    resize: none;
+}
+
+
+
 
 @media (max-width: 600px) {
     button {

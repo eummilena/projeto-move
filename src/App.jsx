@@ -10,14 +10,17 @@ import Form from './form/Form'
 
 function App() {
 
+  const [form, setForm] = React.useState(false);
+
   return (
     <div className='container'>
-      <Header />
-      <Services /> 
-      <Works />
+      <Header form={form} setForm={setForm} />
+      <Services />
+      <Works form={form} setForm={setForm} />
       <Move />
       <Location />
-      <Form />
+      {form && <Form setForm={setForm} />}
+
     </div>
   )
 }

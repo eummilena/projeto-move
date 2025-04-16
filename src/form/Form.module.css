@@ -8,6 +8,8 @@
     width: 100%;
     height: 100%;
     margin: 0;
+    padding: 2rem;
+
 }
 
 .form {
@@ -16,8 +18,10 @@
     flex-direction: column;
     padding: 1rem;
     align-items: center;
-    height: 80vh;
+    height: clamp(60vh, 80vh, 100vh);
     border-radius: 10px;
+    bottom: 10px;
+
 }
 
 
@@ -51,6 +55,7 @@
     background: none;
     color: #ff3800;
     cursor: pointer;
+
 }
 
 .buttonEnd {
@@ -62,11 +67,16 @@
 }
 
 .close {
+    position: relative;
     background-color: red;
     color: #fff;
-    padding: 1rem;
+    padding: .6rem;
+
+    text-align: justify;
 
 }
+
+
 
 .modalButton {
     margin-left: 75rem;
@@ -86,13 +96,14 @@
 }
 
 .step {
-    width: 40px;
-    height: 40px;
-    padding: 2px;
+    width: 15%;
+    height: auto;
+    padding: .5rem;
     border-radius: 50%;
+    height: auto;
     text-align: center;
-    line-height: 35px;
 }
+
 
 .stepOn {
     background: #000;
@@ -145,26 +156,10 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
-
-.select {
-    background: #f8faff;
-    padding: .5rem .75rem;
-    border: none;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
+    flex-wrap: wrap;
 }
 
 
-
-.select option {
-    background: #f8faff;
-    padding: .5rem .75rem;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-}
 
 /* ------------------------------ Step 3 -----------------------------------*/
 
@@ -209,5 +204,43 @@
 }
 
 .check {
-    width: 10%;
+    width: clamp(10%, 20%, 30%);
+}
+
+
+@media (max-width:900px) {
+    .steps {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .step1,
+    .step2,
+    .step3 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .forms {
+        overflow: scroll;
+    }
+
+
+
+    .buttonContent {
+        display: flex;
+    }
+
+    .radio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modalButton {
+        margin-left: 17rem;
+    }
+
 }

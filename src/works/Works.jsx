@@ -14,7 +14,7 @@ const Works = ({ setForm }) => {
     <section className={styles.work}>
       <Subtitle4 subtitle4='Como funciona?' className={styles.subtitle} />
       <Text text="A move simplifica todo o processo de movimentação" />
-      <div className={styles.grid}>
+      <div className={styles.info}>
         <div className={styles.box1}>
           <img src={home} alt="casa" className={styles.steps} />
           <Text className={styles.textBold} text="1. Insira seus detalhes de movimentaçao" />

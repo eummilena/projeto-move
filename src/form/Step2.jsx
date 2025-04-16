@@ -16,11 +16,14 @@ const Step2 = () => {
       <div className={styles.form2}>
         <label htmlFor='mudanca'>Tipo de mudança</label>
         <div className={styles.radio}>
-          <input type="radio" id="residencial" value="residencial" name="mudanca" />
-          <label htmlFor="residencial">Residencial</label>
-
-          <input type="radio" id="industrial" value="industrial" name="mudanca" />
-          <label htmlFor="industrial"> Industrial</label>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+            <input type="radio" id="residencial" value="residencial" name="mudanca" />
+            <label htmlFor="residencial">Residencial</label>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+            <input type="radio" id="industrial" value="industrial" name="mudanca" />
+            <label htmlFor="industrial"> Industrial</label>
+          </div>
         </div>
       </div>
 
@@ -31,7 +34,7 @@ const Step2 = () => {
 
 
       <div className={styles.form4}>
-        <label htmlFor="obs">Observações/Comentários</label>
+        <label htmlFor="obs">Comentários/Observações</label>
         <textarea id="obs" placeholder='Suas observações'></textarea>
       </div>
 

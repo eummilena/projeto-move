@@ -79,7 +79,9 @@
 
 
 .modalButton {
-    margin-left: 75rem;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
 }
 
 
@@ -97,10 +99,9 @@
 
 .step {
     width: 15%;
-    height: auto;
+    height: 15%;
     padding: .5rem;
     border-radius: 50%;
-    height: auto;
     text-align: center;
 }
 
@@ -225,7 +226,7 @@
     }
 
     .forms {
-        overflow: scroll;
+        overflow-y: scroll;
     }
 
 
@@ -239,8 +240,6 @@
         flex-direction: column;
     }
 
-    .modalButton {
-        margin-left: 17rem;
-    }
+
 
 }

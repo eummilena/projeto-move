@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Form.module.css'
 import Subtitle from '../components/Subtitle'
 import { FaCircleXmark } from "react-icons/fa6";
@@ -26,13 +26,27 @@ const Form = ({ setForm }) => {
         setStep((prev) => Math.max(prev - 1, 1));
     }
 
+    useEffect(() => {
+        function handleKeyDown(event) {
+            if (event.key === 'Escape') { setForm(false); }
+        }
+        document.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [setForm]);
+
+
+
 
     return (
         <section className={styles.modalForm}>
-            <div className={styles.modalButton}>
-                <Button onClick={() => setForm(false)} className={styles.close} >Fechar </Button>
-            </div>
-            <div className={styles.form}>
+
+            <div className={styles.form} >
+                <div className={styles.modalButton}>
+                    <Button onClick={() => setForm(false)} className={styles.close} >&#10005;</Button>
+                </div>
                 <Subtitle subtitle="Vamos começar ?" />
                 <Steps stepActual={step} />
                 <form className={styles.forms} onSubmit={(event) => event.preventDefault()}>
@@ -43,11 +57,13 @@ const Form = ({ setForm }) => {
                         {step === 3 && <Step3 />}
                         {step === 4 && <Step4 setForm={setForm} />}
                     </div>
-                    <div className={styles.buttonContent}>
-                        {step < 4 && <Button className={styles.buttonBack} onClick={prevStep} disabled={step === 1}> Voltar</Button>}
-                        {step < 4 && <Button className={styles.buttonNext} onClick={nextStep}> Próximo</Button>}
-                        {step === 4 && null}
-                    </div>
+                    {step < 4 ? (
+                        <div className={styles.buttonContent}>
+                            {step < 4 && <Button className={styles.buttonBack} onClick={prevStep} disabled={step === 1}> Voltar</Button>}
+                            {step < 4 && <Button className={styles.buttonNext} onClick={nextStep}> Próximo</Button>}
+                        </div>
+                    ) : null}
+
                 </form>
             </div>
         </section>

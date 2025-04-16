@@ -8,9 +8,6 @@
     height: 100%;
     padding: 2rem;
 
-
-
-
 }
 
 .subtitle {
@@ -21,7 +18,7 @@
     font-weight: 600;
 }
 
-.grid {
+.info {
     display: grid;
     grid-template-columns: 1fr, 2fr, 1fr;
 
@@ -79,11 +76,77 @@
 .button {
     color: #ff3800;
     border: #ff3800 1px solid;
-    border-radius: 10px;
     background-color: #fff;
 }
 
 .button:hover {
     color: #fff;
     background-color: #ff3800;
+}
+
+@media (max-width: 600px) {
+    .work {
+        margin-top: 30vh;
+        width: 100%;
+        padding: 2rem;
+
+    }
+
+    .pontilhados {
+        display: none;
+    }
+
+    .info {
+        display: grid;
+        grid-template-areas:
+            "box1 ."
+            "box2 ."
+            "box3 ."
+            "box4 .";
+    }
+
+    .box1 {
+        grid-area: box1;
+        margin-left: 20px;
+        padding: 1rem;
+    }
+
+    .box2 {
+        grid-area: box2;
+        margin-top: 0;
+        margin-left: 15px;
+
+    }
+
+    .box3 {
+        grid-area: box3;
+        margin-top: 0;
+        margin-left: 15px;
+    }
+
+    .box4 {
+        grid-area: box4;
+        margin-top: 0;
+        margin-left: 15px;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 80vw;
+
+
+    }
+
+    @media (min-width:500px) {
+        .work {
+            margin-top: 50vh;
+        }
+    }
 }

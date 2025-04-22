@@ -40,11 +40,11 @@ const stylesInput = {
 const Step3 = () => {
 
   const cep = useForm('cep');
-  const adrress = useForm();
+  const address = useForm();
   const cidade = useForm();
   const estado = useForm();
 
-  const datas = { cep, adrress, cidade, estado }
+  const datas = { cep, address, cidade, estado }
 
   return (
     <div className={styles.step3}>

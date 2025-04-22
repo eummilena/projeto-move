@@ -12,19 +12,18 @@ const services = [
         title: 'Atendimento Personalizado',
         description: 'Reserva simples online. Economize tempe e aborrecimento sem visitas domiciliares.',
     },
-     
-        {
+
+    {
         icon: shield,
         title: 'Transporte com seguro premium',
         description: 'Oferecemos os melhores seguros do mercado. Cada um de nossos movimentos é coberto por um transporte premium abrangente.',
     },
-         {
+    {
         icon: dollar,
         title: 'Totalmente transparente',
         description: 'Preços transparentes para todos os serviços Não precisa ser caro. Nós sabemos.',
     },
 ]
-console.log(services);
 
 const DescriptionServices = () => {
     return (
@@ -36,9 +35,9 @@ const DescriptionServices = () => {
                     <Text className={styles.text} text={service.description} />
                 </article>
             ))}
-</div>
-  )
-   
+        </div>
+    )
+
 }
 
 export default DescriptionServices

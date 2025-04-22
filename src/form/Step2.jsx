@@ -1,43 +1,72 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Form.module.css'
+import Select from '../components/Select'
+import Radio from '../components/Radio';
+import Textarea from '../components/Textarea';
 
 const Step2 = () => {
+  const [tamMudanca, setTamMudanca] = useState('');
+  const [tipMudanca, setTipMudanca] = useState('');
+
+  const textarea = [
+    {
+      id: 'descricao',
+      label: 'Descrição do móveis',
+      placeholder: 'Descrição do móveis',
+    },
+    {
+      id: 'obs',
+      label: 'Comentários/Observações',
+      placeholder: 'Comentários/Observações',
+    },
+  ]
+
+  const stylesTextarea = {
+    obs: styles.form3,
+    descricao: styles.form4
+  }
+
+
+
+
   return (
     <div className={styles.step2}>
       <div className={styles.form1}>
         <label htmlFor='tamanho'>Tamanho da mudança</label>
-        <select id='tamanho' name='tamanhos' className={styles.select}>
-          <option value="grande">Grande porte</option>
-          <option value="medio">Médio porte</option>
-          <option value="pequeno">Pequeno porte</option>
-        </select>
+        <Select
+          className={styles.select}
+          options={['Grande porte', 'Médio porte', 'Pequeno porte']}
+          value={tamMudanca}
+          setValue={setTamMudanca}
+          id='tamanho'
+        />
       </div>
 
       <div className={styles.form2}>
         <label htmlFor='mudanca'>Tipo de mudança</label>
         <div className={styles.radio}>
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
-            <input type="radio" id="residencial" value="residencial" name="mudanca" />
-            <label htmlFor="residencial">Residencial</label>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
-            <input type="radio" id="industrial" value="industrial" name="mudanca" />
-            <label htmlFor="industrial"> Industrial</label>
+          <div >
+            <Radio
+              options={['Residencial', 'Industrial']}
+              value={tipMudanca}
+              setValue={setTipMudanca}
+            />
           </div>
         </div>
       </div>
 
-      <div className={styles.form3}>
-        <label htmlFor="descricao">Descrição do móveis</label>
-        <textarea id="descricao" placeholder='Descrição dos movéis' />
-      </div>
+      {textarea.map(({ id, label, placeholder }) => {
 
-
-      <div className={styles.form4}>
-        <label htmlFor="obs">Comentários/Observações</label>
-        <textarea id="obs" placeholder='Suas observações'></textarea>
-      </div>
-
+        return (
+          <div className={stylesTextarea[id]} key={id} >
+            <Textarea
+              id={id}
+              label={label}
+              placeholder={placeholder}
+            />
+          </div>)
+      })
+      }
     </div>
   )
 }

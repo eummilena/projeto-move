@@ -9,8 +9,6 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Button from '../components/Button';
 
-import { IoCloseSharp } from "react-icons/io5";
-
 
 
 const Form = ({ setForm }) => {

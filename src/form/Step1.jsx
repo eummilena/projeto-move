@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Form.module.css'
 import Input from '../components/Input'
+import useForm from '../hook/useForm'
 
 const formStep = [
   {
@@ -27,19 +28,42 @@ const formStep = [
 
 
 
+
 const Step1 = () => {
 
+  const Styles = {
+    nome: styles.form1,
+    sobrenome: styles.form2,
+    email: styles.form3,
+    telefone: styles.form4,
+  };
+
+  const nome = useForm();
+  const sobrenome = useForm();
+  const email = useForm('email');
+  const telefone = useForm();
+
+
+  const datas = { nome, sobrenome, email, telefone }
 
   return (
     <div className={styles.step1} >
-      {formStep.map(({ id, label, type }) => (
-        <div key={id} className={`${id === 'nome' && styles.form1} ${id === 'sobrenome' && styles.form2} ${id === 'email' && styles.form3} ${id === 'telefone' && styles.form4} `}>
-          <label htmlFor={id}>{label}</label>
-          <Input type={type} id={id}
+      {formStep.map(({ id, label, type }) => {
+        return (
+          <div key={id} className={Styles[id]}>
+            <Input
+              type={type}
+              id={id}
+              label={label}
+              name={id}
+              {...datas[id]}
+            />
 
-          />
-        </div>
-      ))}
+          </div>)
+      }
+
+
+      )}
     </div>
   )
 }

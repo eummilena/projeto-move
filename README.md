@@ -1,3 +1,2 @@
 
-O Move é um site desenvolvido para conectar pessoas que precisam se mudar com empresas e profissionais de transporte. A plataforma permite solicitar orçamentos, agendar serviços e acompanhar o status da mudança de forma simples e intuitiva. O objetivo é tornar o processo de mudança mais eficiente e organizado, facilitando a vida dos usuários.
-
+O Move é uma plataforma online projetada para facilitar mudanças residenciais, conectando clientes a empresas e profissionais especializados no transporte de móveis e itens pessoais. O site oferece uma experiência intuitiva, permitindo que os usuários solicitem orçamentos personalizados, comparem serviços, agendem mudanças e acompanhem o processo em tempo real. Com foco na praticidade e segurança, o Move busca tornar a experiência de mudança mais organizada e eficiente, garantindo que cada etapa ocorra sem complicações.

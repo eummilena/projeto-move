@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Form.module.css'
+import useMedia from '../hook/useMedia'
 
 const steps = [
     {
@@ -29,7 +30,9 @@ const steps = [
 
 
 const Steps = ({ stepActual }) => {
-    const isMobile = window.innerWidth <= 900;
+    const isMobile = useMedia('(max-width:1000px)');
+    console.log(isMobile);
+
 
     return (
         <>
